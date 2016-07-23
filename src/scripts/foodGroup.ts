@@ -3,13 +3,18 @@
     //TODO (PROPERTIES EXERCISE)
     //1. Create a private "_name" member variable/field that is a string type
     //   Example: private _myVariable: string;
-    
+    private _name: string;
     
     //TODO (PROPERTIES EXERCISE) 
     //1. Create a get and set block for a "name" property that is a string type.
     //   The get block should return _name while the set block should assign the value to _name.
+    get name(): string {
+      return this._name;
+    }
     
-    
+    set name(name: string) {
+      this._name = name;
+    }
     
     /*
       TODO (CONSTRUCTORS EXERCISE) Perform the following steps:
