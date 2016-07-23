@@ -18,11 +18,11 @@
                 //TODO (CONSTRUCTORS EXERCISE)
                 //Change the RecipeCategory code below so that the property values are
                 //passed into the constructor rather than set individually.
-                var rc = new RecipeCategory();
-                rc.name = el.value,
-                rc.foodGroups = item.foodGroups,
-                rc.description = item.description,
-                rc.examples = item.examples
+                var rc = new RecipeCategory(item);
+                // rc.name = el.value,
+                // rc.foodGroups = item.foodGroups,
+                // rc.description = item.description,
+                // rc.examples = item.examples
                 return rc;                
               });
           this.renderer.renderCategory(category);
