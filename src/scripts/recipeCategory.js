@@ -22,7 +22,7 @@ var RecipeCategory = (function (_super) {
             parameter to the BaseRecipeCategory class (the base class or "super") by calling super().
          b. Assign the recipeCategory parameter's description property to the description property in this class.
          c. Assign the recipeCategory parameter's examples property to the examples property in this class.
-    
+
     */
     function RecipeCategory(recipeCategory) {
         _super.call(this, recipeCategory.name, recipeCategory.foodGroups);

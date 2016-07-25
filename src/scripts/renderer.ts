@@ -1,5 +1,5 @@
 ﻿class Renderer {
-  
+
     constructor(public recipeCategoriesSummary: RecipeCategories<IRecipeCategorySummary>) {
         if (recipeCategoriesSummary) {
             this.renderCategories(recipeCategoriesSummary);
@@ -21,7 +21,7 @@
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the category parameter type to IRecipeCategory
-    renderCategory(category: RecipeCategory) {
+    renderCategory(category: IRecipeCategory) {
         //Update foodgroups bullet points
         var foodGroups = (<HTMLSelectElement> document.getElementById('FoodGroups'));
         foodGroups.value = '';
@@ -41,13 +41,13 @@
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the category parameter type to IRecipeCategory
-    renderExamples(category: RecipeCategory) {
+    renderExamples(category: IRecipeCategory) {
         //Update examples
         var examples = (<HTMLSelectElement> document.getElementById('examples'));
         examples.value = '';
 
         var html = '<ol>';
-        for (var i = 0, len = category.examples.length; i < len; i++) { 
+        for (var i = 0, len = category.examples.length; i < len; i++) {
             var example = category.examples[i];
             var ingredients = example.ingredients.map((ingredient) => {
                 return ingredient.name;
@@ -67,4 +67,4 @@
         var examples = (<HTMLSelectElement> document.getElementById('examples'));
         examples.value = 'Unable to load data!';
     }
-} 
+}
